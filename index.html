@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+ 
+</head>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap");
+
+    :root {
+      --fontFraunces: "Fraunces", serif;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+  background-color: hsl(30, 38%, 92%);
+  margin: 0px;
+  padding: 0px;
+}
+
+ .container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 100vh;
+
+}
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+   
+    
+  }
+  
+  .card{
+    border-radius: 0px 10px 10px 0px;
+    flex: 25%;
+    max-width: 25%;
+    object-position: 80px;
+    
+  
+  }
+  .pcard{
+    border-radius: 0px 10px 10px 0px;
+    flex: 25%;
+    padding: 20px 40px 20px 40px;
+    max-width: 20%;
+    background-color: hsl(0 , 0%, 100%);
+  
+  }
+  
+  
+  
+  .card img {
+    
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  #per{
+    font-size: 14px;
+    color:  hsl(228, 12%, 48%) ;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 4px;
+  }
+
+  h1{
+    font-family: var(--fontFraunces);
+    
+  }
+
+  .cart{
+    position: relative;
+    right: 10px;
+    top: 3px;
+  }
+  
+.discp {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+    color:  hsl(228, 12%, 48%) ;
+  line-height: 1.3rem;
+}
+
+
+.pr{
+  position: relative;
+  top: 10px;
+ 
+}
+
+.price{
+  font-size: 40px;
+  color:  hsl(158, 36%, 37%);
+  font-family: var(--fontFraunces);
+}
+
+.priceoff{
+  position: relative;
+  font-size: 20px;
+  color: hsl(228, 12%, 48%);
+  left: 20px;
+  bottom: 10px;
+  text-decoration: line-through;
+}
+  
+  /* button */
+  
+  .btn {
+    position: relative;
+    text-align: center;
+  background: #52AD8C ;
+  background-image: -webkit-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -moz-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -ms-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -o-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: linear-gradient(to bottom, #52AD8C , #52AD8C );
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  border: none;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 80px 14px 80px;
+  text-decoration: none;
+  left: 5px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #75d8b4;
+  background-image: -webkit-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -moz-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -ms-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -o-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: linear-gradient(to bottom, #75d8b4, #75d8b4);
+  text-decoration: none;
+}
+  
+  
+  
+  
+  /* button */
+
+  @media (min-width: 1025px) and (max-width: 1600px){
+
+  }
+
+
+  @media (min-width: 769px) and (max-width: 1024px){
+    body{
+  background-color: hsl(30, 38%, 92%);
+  margin: 10px;
+  padding: 0px;
+  
+}
+
+.container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 300vh;
+
+}
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+   
+    
+  }
+
+
+  .card {
+      
+      flex: 100%;
+      max-width: 100%;
+      height: 300px;
+      
+    }
+
+    .pcard {
+      padding: 40px;
+      flex: 50%;
+      max-width: 100%;
+      height: 300px;
+      border-radius: 0px 0px 10px 10px;
+      background-color: hsl(0 , 0%, 100%);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: 50% 40%;
+      
+      border-radius: 10px 10px 0px 0px;
+
+
+  }
+
+  .cart{
+    position: relative;
+    right: 10px;
+    top: 3px;
+  }
+  
+.discp {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+    color:  hsl(228, 12%, 48%) ;
+  line-height: 1.3rem;
+}
+
+
+
+.pr{
+  position: relative;
+  top: 50px;
+  left: 150px;
+ 
+}
+
+.price{
+  position: relative;
+  left: 10px;
+  top: 5px;
+  font-size: 40px;
+  color:  hsl(158, 36%, 37%);
+}
+
+.priceoff{
+  position: relative;
+  font-size: 18 px;
+  color: hsl(228, 12%, 48%);
+  left: 45px;
+  bottom: 1px;
+  text-decoration: line-through;
+}
+  
+
+
+.btn {
+    position: relative;
+    text-align: center;
+  background: #52AD8C ;
+  background-image: -webkit-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -moz-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -ms-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -o-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: linear-gradient(to bottom, #52AD8C , #52AD8C );
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  border: none;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 220px 14px 220px;
+  text-decoration: none;
+  left: 100px;
+  top: 90px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #75d8b4;
+  background-image: -webkit-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -moz-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -ms-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -o-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: linear-gradient(to bottom, #75d8b4, #75d8b4);
+  text-decoration: none;
+}
+
+
+
+  }
+
+  
+  @media (min-width: 482px) and (max-width: 768px){
+    body{
+  background-color: hsl(30, 38%, 92%);
+  margin: 10px;
+  padding: 0px;
+  
+}
+
+.container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 250vh;
+
+}
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+   
+    
+  }
+
+
+  .card {
+      
+      flex: 100%;
+      max-width: 100%;
+      height: 200px;
+      
+    }
+
+    .pcard {
+      flex: 50%;
+      max-width: 100%;
+      height: 330px;
+      border-radius: 0px 0px 10px 10px;
+      background-color: hsl(0 , 0%, 100%);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      
+      border-radius: 10px 10px 0px 0px;
+
+
+  }
+
+  .cart{
+    position: relative;
+    right: 35px;
+    top: 3px;
+  }
+  
+.discp {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+    color:  hsl(228, 12%, 48%) ;
+  line-height: 1.3rem;
+  
+}
+
+
+.pr{
+  position: relative;
+  top: 0px;
+ 
+}
+
+.price{
+  position: relative;
+  left: 20px;
+  top: 5px;
+  font-size: 40px;
+  color:  hsl(158, 36%, 37%);
+}
+
+.priceoff{
+  position: relative;
+  font-size: 18 px;
+  color: hsl(228, 12%, 48%);
+  left: 45px;
+  bottom: 7px;
+  text-decoration: line-through;
+}
+  
+
+
+.btn {
+    position: relative;
+    text-align: center;
+  background: #52AD8C ;
+  background-image: -webkit-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -moz-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -ms-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -o-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: linear-gradient(to bottom, #52AD8C , #52AD8C );
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  border: none;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 100px 14px 100px;
+  text-decoration: none;
+  left: 10px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #75d8b4;
+  background-image: -webkit-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -moz-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -ms-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -o-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: linear-gradient(to bottom, #75d8b4, #75d8b4);
+  text-decoration: none;
+}
+
+
+
+  }
+
+
+
+  @media (min-width: 301px) and (max-width: 481px) {
+body{
+  background-color: hsl(30, 38%, 92%);
+  margin: 30px;
+  padding: 0px;
+  
+}
+
+
+    .container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 190vh;
+
+}
+
+    .grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: fit-content;
+  
+   
+    
+  }
+
+
+
+    .card {
+      flex: 100%;
+      max-width: 100%;
+      height: 180px;
+     
+      
+    }
+    .pcard {
+      padding: 20px;
+      flex: 50%;
+      max-width: 100%;
+      height: 360px;
+      border-radius: 0px 0px 10px 10px;
+      background-color: hsl(0 , 0%, 100%);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: 50% 40%;
+      
+      border-radius: 10px 10px 0px 0px;
+
+    }
+
+
+    .cart{
+    position: relative;
+    right: 10px;
+    top: 3px;
+  }
+  
+.discp {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+    color:  hsl(228, 12%, 48%) ;
+  line-height: 1.3rem;
+}
+
+
+.btn {
+    position: relative;
+    text-align: center;
+  background: #52AD8C ;
+  background-image: -webkit-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -moz-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -ms-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: -o-linear-gradient(top, #52AD8C , #52AD8C );
+  background-image: linear-gradient(to bottom, #52AD8C , #52AD8C );
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  border: none;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 60px 14px 60px;
+  text-decoration: none;
+  left: 13px;
+  top: 15Px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #75d8b4;
+  background-image: -webkit-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -moz-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -ms-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: -o-linear-gradient(top, #75d8b4, #75d8b4);
+  background-image: linear-gradient(to bottom, #75d8b4, #75d8b4);
+  text-decoration: none;
+}
+
+.pr{
+  position: relative;
+  top: 0px;
+ 
+}
+
+.price{
+  position: relative;
+  left: 10px;
+  bottom: 5px;
+  font-size: 30px;
+  color:  hsl(158, 36%, 37%);
+}
+
+.priceoff{
+  position: relative;
+  font-size: 10px;
+  color: hsl(228, 12%, 48%);
+  left: 25px;
+  bottom: 15px;
+  text-decoration: line-through;
+}
+  
+
+
+  } 
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="grid-container">
+  
+      <div class="card">
+        <img src="./images/image-product-desktop.jpg" alt="">
+      </div>
+      <div class="pcard"> 
+    <p id="per">PERFUME</p>
+    <h1>Gabrielle Essence Eau De Parfum</h1>
+    <p class="discp">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.</p>
+
+      <div class="pr">
+        <span class="price">$149.99</span>
+        <span class="priceoff">$169.99</span>
+      </div>
+      
+      <button class="btn"> <span class="cart"> <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg></span> <span> Add to Cart</span></button>
+    
+      </div>
+    
+       
+    </div>
+     
+
+    
+</div>
+
+ 
+ 
+</body>
+</html>
